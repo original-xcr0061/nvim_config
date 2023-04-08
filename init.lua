@@ -260,6 +260,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- See `:help telescope` and `:help telescope.setup()`
 
 local fb_actions = require "telescope._extensions.file_browser.actions"
+
 require('telescope').setup {
   defaults = {
     layout_strategy = 'horizontal',
