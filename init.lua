@@ -71,7 +71,7 @@ require('lazy').setup({
   'tpope/vim-rhubarb',
 
   -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-sleuth',
+  --'tpope/vim-sleuth',
 
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
@@ -197,14 +197,23 @@ require('lazy').setup({
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
--- Set highlight on search
+-- Set highlight on search and search while typing
 vim.o.hlsearch = false
+vim.opt.incsearch = true
 
--- Make line numbers default
+-- Make line numbers relativenumber default
 vim.wo.number = true
-
--- Make relativenumber default
 vim.opt.relativenumber = true
+
+-- Tab stop options refer to youtube ThePrimeagen - 0 to LSP : Neovim RC From Scratch
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+
+-- Keep 8 lines up or down from cursor
+vim.opt.scrolloff = 8
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
