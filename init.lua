@@ -146,7 +146,7 @@ require('lazy').setup({
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
-
+  -- VimBeGood Gamw
   { 'ThePrimeagen/vim-be-good'},
 
   -- Fuzzy Finder (files, lsp, etc)
