@@ -379,10 +379,15 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 
 -- [[ Configure Indent_blankline ]]
+
+vim.opt.list = true
+vim.cmd [[highlight IndentBlanklineContextStart guisp=#99c1f1 gui=underline]]
+
 require("indent_blankline").setup {
     --space_char_blankline = " ",
     show_current_context = true,
-    --show_current_context_start = true,
+    show_current_context_start = true,
+    show_end_of_line = true,
 }
 
 -- [[ Configure Treesitter ]]
