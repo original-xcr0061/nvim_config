@@ -378,6 +378,45 @@ vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 
+-- [[ Configure Bufferline Keymaps ]]
+vim.api.nvim_set_keymap("n", "<leader>b1", "<cmd>lua require 'bufferline'.go_to_buffer(1, true)<CR>",
+   {
+    desc = '[B]uffer [1]',
+    noremap = true
+   }
+)
+vim.api.nvim_set_keymap("n", "<leader>b2", "<cmd>lua require 'bufferline'.go_to_buffer(2, true)<CR>",
+   {
+    desc = '[B]uffer [2]',
+    noremap = true
+   }
+)
+vim.api.nvim_set_keymap("n", "<leader>b3", "<cmd>lua require 'bufferline'.go_to_buffer(3, true)<CR>",
+   {
+    desc = '[B]uffer [3]',
+    noremap = true
+   }
+)
+vim.api.nvim_set_keymap("n", "<leader>b4", "<cmd>lua require 'bufferline'.go_to_buffer(4, true)<CR>",
+   {
+    desc = '[B]uffer [4]',
+    noremap = true
+   }
+)
+vim.api.nvim_set_keymap("n", "<leader>b5", "<cmd>lua require 'bufferline'.go_to_buffer(5, true)<CR>",
+   {
+    desc = '[B]uffer [5]',
+    noremap = true
+   }
+)
+vim.api.nvim_set_keymap("n", "<leader>b6", "<cmd>lua require 'bufferline'.go_to_buffer(6, true)<CR>",
+   {
+    desc = '[B]uffer [6]',
+    noremap = true
+   }
+)
+vim.keymap.set("n", "<leader>bc", "<cmd>:bd<CR>", { desc = '[B]uffer [C]lose', noremap = true })
+
 -- [[ Configure Indent_blankline ]]
 
 vim.opt.list = true
